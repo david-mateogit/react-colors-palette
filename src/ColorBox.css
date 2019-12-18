@@ -5,4 +5,51 @@
   display: inline-block;
   position: relative;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+.copy-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.copy-button {
+  width: 100px;
+  margin: auto;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  line-height: 30px;
+  color: white;
+  border: none;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+.ColorBox:hover .copy-button {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.box-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #000;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.box-content-name {
+  margin: 10px;
+}
+
+.see-more {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: #fff;
+  width: 60px;
+  text-align: center;
+  line-height: 30px;
 }
