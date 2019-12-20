@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable prefer-const */
 import chroma from "chroma-js";
 
@@ -35,16 +36,18 @@ function generatePalette(starterPalette) {
   for (let color of starterPalette.colors) {
     let scale = getScale(color.color, 10).reverse();
     for (let i in scale) {
-      newPalette.colors[levels[i]].push({
-        name: `${color.name} ${levels[i]}`,
-        id: color.name.toLowerCase().replace(/ /g, "-"),
-        hex: scale[i],
-        rgb: chroma(scale[i]).css(),
-        rgba: chroma(scale[i])
-          .css()
-          .replace("rgb", "rgba")
-          .replace(")", ",1.0)"),
-      });
+      if (Object.prototype.hasOwnProperty.call(scale, i)) {
+        newPalette.colors[levels[i]].push({
+          name: `${color.name} ${levels[i]}`,
+          id: color.name.toLowerCase().replace(/ /g, "-"),
+          hex: scale[i],
+          rgb: chroma(scale[i]).css(),
+          rgba: chroma(scale[i])
+            .css()
+            .replace("rgb", "rgba")
+            .replace(")", ",1.0)"),
+        });
+      }
     }
   }
 
