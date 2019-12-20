@@ -9,7 +9,8 @@
   outline: none;
 }
 
-.ColorBox:active {
+.ColorBox:active,
+.ColorBox:focus {
   outline: none;
 }
 .copy-container {
