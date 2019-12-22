@@ -1,8 +1,8 @@
 .ColorBox {
   width: 20%;
-  height: 25%;
+
   margin: 0 auto;
-  display: inline-block;
+  display: flex;
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
@@ -14,9 +14,10 @@
   outline: none;
 }
 .copy-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   z-index: 5;
 }
 
@@ -50,6 +51,7 @@
 
 .box-content-name {
   margin: 10px;
+  width: 60%;
 }
 
 .see-more {
@@ -129,7 +131,16 @@
     height: 10%;
     justify-content: space-between;
   }
+  .copy-button {
+    display: none;
+  }
   .copy-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .box-content {
     width: 100%;
   }
 

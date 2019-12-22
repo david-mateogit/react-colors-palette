@@ -1,9 +1,25 @@
 .Palette {
   height: 100vh;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .Palette-colors {
   height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 640px) {
+  .Palette {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .Palette-colors {
+    overflow: hidden;
+  }
 }
